@@ -25,11 +25,12 @@ public class CloseBlockVerifier implements Verifier{
     }
 
     /**
-     * Performs relevant action to
-     * @param dataGatherer - object of data to update.
+     * Checks that the way the variable is assigned is functional and legit.
+     * @param lines - lines of code to be checked.
+     * @return - true upon success, false upon failure.
      * @throws Exception if an error has occurred.
      */
-    public void doAction(DataGatherer dataGatherer) throws Exception{
-        dataGatherer.removeBlock();
+    public boolean doAction(Iterator<String> lines) throws Exception{
+        return true;
     }
 }
