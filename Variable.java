@@ -36,6 +36,20 @@ public class Variable {
     public String getName(){
         return this.name;
     }
+    
+    /**
+     * @return true if variable is final, false otherwise.
+     */
+    public boolean isFinal(){
+        return isFinal;
+    }
+    
+    /**
+     * @return true if variable has a value assigned to it, false otherwise.
+     */
+    public boolean hasValue(){
+        return hasValue;
+    }
 
     /**
      * Checks if variable is of a legitimate type.
