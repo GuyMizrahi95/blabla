@@ -37,11 +37,11 @@ public class DataGatherer {
     /**
      * Adds a function to the list of functions.
      * @param name - name of new function.
-     * @throws ExistingException - in case that such function already exists - throws mentioned exception.
+     * @throws ExistenceException - in case that such function already exists - throws mentioned exception.
      */
-    public void addFunction(String name) throws ExistingException{
+    public void addFunction(String name) throws ExistenceException {
         if (functionExists(name)){
-            throw new ExistingException("Such function already exists!");
+            throw new ExistenceException("Such function already exists!");
         }
         functions.add(name);
     }
@@ -49,14 +49,14 @@ public class DataGatherer {
     /**
      * Removes desired function.
      * @param name - name of function to remove.
-     * @throws ExistingException - in case such function does not exist - throws mentioned exception.
+     * @throws ExistenceException - in case such function does not exist - throws mentioned exception.
      */
-    public void removeFunction(String name) throws ExistingException{
+    public void removeFunction(String name) throws ExistenceException {
         if (functionExists(name)){
             functions.remove(name);
             return;
         }
-        throw new ExistingException("Such function is not defined");
+        throw new ExistenceException("Such function is not defined");
     }
 
     /**
