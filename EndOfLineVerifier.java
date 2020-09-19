@@ -1,5 +1,3 @@
-import java.util.Iterator;
-
 /**
  * This class represents an end of line verifier, that checks if given line or action includes an ;
  * at the end of it.
@@ -27,10 +25,10 @@ public class EndOfLineVerifier implements Verifier{
 
     /**
      * A method that does relevant action.
-     * @param lines - lines to perform action on.
-     * @return true upon success, false upon failure.
+     * @param dataGatherer - object of data to update.
      */
-    public boolean doAction(Iterator<String> lines){
-        return isActivated;
+    public void doAction(DataGatherer dataGatherer){
+        
     }
 }
+
